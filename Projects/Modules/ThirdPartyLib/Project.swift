@@ -6,7 +6,6 @@ let project = Project.framework(
     name: "ThirdPartyLib",
     dependencies: [
         .SPM.CombineMoya,
-        .SPM.Swinject,
         .SPM.Needle,
         .SPM.RealmSwift,
     ]

@@ -10,3 +10,6 @@ reset:
 	tuist clean
 	rm -rf **/*.xcodeproj
 	rm -rf *.xcworkspace
+
+needle:
+	sh Scripts/NeedleRunScript.sh

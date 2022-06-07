@@ -7,5 +7,6 @@ let project = Project.framework(
     dependencies: [
         .SPM.CombineMoya,
         .SPM.Swinject,
+        .SPM.Needle,
     ]
 )

@@ -8,5 +8,6 @@ let project = Project.framework(
         .SPM.CombineMoya,
         .SPM.Needle,
         .SPM.RealmSwift,
+        .SPM.Inject
     ]
 )

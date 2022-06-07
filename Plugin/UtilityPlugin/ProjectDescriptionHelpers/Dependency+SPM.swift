@@ -11,4 +11,5 @@ public extension TargetDependency.SPM {
     static let Nimble = TargetDependency.external(name: "Nimble")
     static let Needle = TargetDependency.external(name: "NeedleFoundation")
     static let RealmSwift = TargetDependency.external(name: "RealmSwift")
+    static let Inject = TargetDependency.external(name: "Inject")
 }

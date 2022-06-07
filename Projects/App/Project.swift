@@ -2,15 +2,6 @@ import ProjectDescriptionHelpers
 import ProjectDescription
 import UtilityPlugin
 
-let settinges: Settings =
-    .settings(base: Environment.baseSetting,
-              configurations: [
-                .debug(name: .dev, xcconfig: .relativeToRoot("XCConfig/App/App-DEV.xcconfig")),
-                .debug(name: .debug),
-                .release(name: .prod, xcconfig: .relativeToRoot("XCConfig/App/App-PROD.xcconfig")),
-                .release(name: .release)
-              ],
-              defaultSettings: .recommended)
 
 let scripts: [TargetScript] = [
     .swiftLint
@@ -102,7 +93,5 @@ let project: Project =
     .init(
         name: Environment.targetName,
         organizationName: Environment.organizationName,
-        settings: settinges,
-        targets: targets,
-        schemes: schemes
+        targets: targets
     )

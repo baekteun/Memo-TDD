@@ -6,4 +6,3 @@ public enum QueryFilter<T: Object> {
     case predicate(query: NSPredicate)
     case `where`(query: ((Query<T>) -> Query<Bool>))
 }
-

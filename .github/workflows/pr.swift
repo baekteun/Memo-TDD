@@ -1,4 +1,4 @@
-name: Swift
+name: Pr
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
 
 
 jobs:
-  ci:
+  pr_with_ci:
     runs-on: macos-latest
 
     steps:

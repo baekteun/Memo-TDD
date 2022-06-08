@@ -11,6 +11,7 @@ extension ObjectPropertyUpdatable where Self: Object {
         }
     }
 }
+
 extension Object: ObjectPropertyUpdatable {}
 
 protocol RealmTaskType: AnyObject {

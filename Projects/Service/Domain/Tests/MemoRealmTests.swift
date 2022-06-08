@@ -3,6 +3,7 @@ import XCTest
 import Quick
 import Nimble
 import Domain
+import ThirdPartyLib
 
 final class MemoRealmTests: QuickSpec {
     override func spec() {

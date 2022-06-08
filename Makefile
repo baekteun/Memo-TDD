@@ -17,15 +17,15 @@ needle:
 	sh Scripts/NeedleRunScript.sh
 
 test:
-	xcodebuild test -scheme CommonFeature -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES build test
-	xcodebuild test -scheme RootFeature -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES build test 
-	xcodebuild test -scheme MemoListFeature -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES build test
-	xcodebuild test -scheme Core -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES build test
-	xcodebuild test -scheme ThirdPartyLib -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES build test
-	xcodebuild test -scheme Utility -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES build test
-	xcodebuild test -scheme APIKit -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES build test
-	xcodebuild test -scheme Domain -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES build test
-	xcodebuild test -scheme LocalDataSource -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES build test
-	xcodebuild test -scheme RemoteDataSource -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES build test
-	xcodebuild test -scheme Data -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES build test
+	xcodebuild test -scheme CommonFeature -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES
+	xcodebuild test -scheme RootFeature -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES 
+	xcodebuild test -scheme MemoListFeature -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES
+	xcodebuild test -scheme Core -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES
+	xcodebuild test -scheme ThirdPartyLib -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES
+	xcodebuild test -scheme Utility -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES
+	xcodebuild test -scheme APIKit -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES
+	xcodebuild test -scheme Domain -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES
+	xcodebuild test -scheme LocalDataSource -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES
+	xcodebuild test -scheme RemoteDataSource -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES
+	xcodebuild test -scheme Data -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES
 

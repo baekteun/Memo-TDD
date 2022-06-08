@@ -38,7 +38,7 @@ protocol RealmTaskType: AnyObject {
     func deleteAll()
 }
 
-public final class RealmTask: RealmTaskType {
+final class RealmTask: RealmTaskType {
     static let shared = RealmTask()
 
     private let realm: Realm

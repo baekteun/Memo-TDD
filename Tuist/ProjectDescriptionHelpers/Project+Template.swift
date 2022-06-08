@@ -84,14 +84,6 @@ public extension Project {
         let scripts: [TargetScript] = [
             .swiftLint
         ]
-        let settings: Settings = .settings(
-            base: Environment.baseSetting,
-            configurations: [
-                .debug(name: .dev, xcconfig: .relativeToXCConfig(type: .dev, name: name)),
-                .debug(name: .debug),
-                .release(name: .prod, xcconfig: .relativeToXCConfig(type: .prod, name: name)),
-                .release(name: .release)
-            ], defaultSettings: .recommended)
         let appTarget = Target(
             name: name,
             platform: platform,
@@ -140,9 +132,6 @@ public extension Project {
             sources: ["Tests/**"],
             dependencies: testTargetDependencies
         )
-        let schemes: [Scheme] = hasDemoApp
-        ? [.makeScheme(target: .dev, name: name), .makeDemoScheme(target: .dev, name: name)]
-        : [.makeScheme(target: .dev, name: name)]
         
         let targets: [Target] = hasDemoApp
         ? [appTarget, testTarget, demoAppTarget]
@@ -152,9 +141,7 @@ public extension Project {
             name: name,
             organizationName: organizationName,
             packages: packages,
-            settings: settings,
-            targets: targets,
-            schemes: schemes
+            targets: targets
         )
     }
 }

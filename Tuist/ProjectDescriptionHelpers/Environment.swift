@@ -8,5 +8,5 @@ public enum Environment {
     public static let organizationName = "baegteun"
     public static let deploymentTarget: DeploymentTarget = .iOS(targetVersion: "15.0", devices: [.iphone, .ipad])
     public static let platform = Platform.iOS
-    public static let baseSetting: SettingsDictionary = SettingsDictionary()
+    public static let baseSetting: SettingsDictionary = .codeSign
 }

@@ -16,8 +16,6 @@ jobs:
     - name: Tuist Setup
       run: |
         make setup
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        brew install swiftlint
       
     - name: project Generate
       run: |

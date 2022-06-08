@@ -1,5 +1,4 @@
 generate:
-	tuist fetch
 	tuist generate
 
 setup:

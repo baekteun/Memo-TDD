@@ -4,6 +4,6 @@ import ProjectDescriptionHelpers
 let project = Project.staticFramework(
     name: "LocalDataSource",
     dependencies: [
-        .Project.Module.Utility,
+        .Project.Module.Utility
     ]
 )

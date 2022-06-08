@@ -29,4 +29,3 @@ test:
 	xcodebuild test -scheme RemoteDataSource -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES
 	xcodebuild test -scheme Data -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.5' -enableCodeCoverage YES
 
-

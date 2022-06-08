@@ -16,8 +16,11 @@ jobs:
     - name: Tuist Setup
       run: |
         make setup
+        
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode.app
       
-    - name: project Generate
+    - name: Project Generate
       run: |
         rm -rf .package.resolved
         make generate

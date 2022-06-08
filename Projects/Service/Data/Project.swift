@@ -6,6 +6,6 @@ let project = Project.staticFramework(
     dependencies: [
         .Project.Service.Domain,
         .Project.Service.LocalDataSource,
-        .Project.Service.RemoteDataSource,
+        .Project.Service.RemoteDataSource
     ]
 )

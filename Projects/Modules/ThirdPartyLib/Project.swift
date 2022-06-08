@@ -11,6 +11,6 @@ let project = Project.framework(
         .SPM.Needle,
         .SPM.RealmSwift,
         .SPM.Inject,
-        .SPM.Realm,
+        .SPM.Realm
     ]
 )

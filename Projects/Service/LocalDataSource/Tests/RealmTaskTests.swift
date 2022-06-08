@@ -4,6 +4,7 @@ import XCTest
 import Quick
 import Nimble
 import RealmSwift
+import ThirdPartyLib
 @testable import LocalDataSource
 
 final class TestObject: Object {

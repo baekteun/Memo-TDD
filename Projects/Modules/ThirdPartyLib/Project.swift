@@ -4,13 +4,12 @@ import UtilityPlugin
 
 let project = Project.framework(
     name: "ThirdPartyLib",
+    packages: Package.common,
     dependencies: [
-        .SPM.Alamofire,
-        .SPM.Moya,
         .SPM.CombineMoya,
-        .SPM.Needle,
         .SPM.RealmSwift,
+        .SPM.Realm,
         .SPM.Inject,
-        .SPM.Realm
+        .SPM.Needle,
     ]
 )

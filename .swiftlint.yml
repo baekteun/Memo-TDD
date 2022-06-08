@@ -1,2 +1,4 @@
+included:
+  - Projects/
 excluded:
   Projects/App/Sources/NeedleGenerated.swift

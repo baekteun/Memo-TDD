@@ -14,7 +14,9 @@ jobs:
       with:
         xcode-version: latest
     - name: Tuist Setup
-      run: make setup
+      run: |
+        make setup
+        brew install swiftlint
       
     - name: project Generate
       run: |

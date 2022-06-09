@@ -25,6 +25,13 @@ jobs:
     - name: All Scheme Test
       run: |
         make test
+        
+    - name: Upload Codecov
+      run: |
+        curl -Os https://uploader.codecov.io/latest/linux/codecov
+        chmod +x codecov
+        ./codecov -t ${{ secrets.CODECOV_SECRET }}
+        
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
       with:

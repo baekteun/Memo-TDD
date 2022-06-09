@@ -4,7 +4,7 @@ fi
 
 export PATH
 
-if which swiftlint >/dev/null; then
+if [ which swiftlint > /dev/null] && [ ! $TUIST_PREPARE_FOR_TESTING ]; then
 	swiftlint
 else
 	echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"

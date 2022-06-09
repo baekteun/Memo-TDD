@@ -20,8 +20,8 @@ jobs:
     - name: Project Generate
       run: |
         rm -rf .package.resolved
-        TUIST_TEST=1 tuist generate 
-        
+        make generate
+
     - name: All Scheme Test
       run: |
         make test

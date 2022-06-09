@@ -15,10 +15,15 @@ jobs:
     - name: Tuist Setup
       run: make setup
       
-    - name: project Generate
+    - name: Project Generate
       run: |
         rm -rf .package.resolved
-        TUIST_TEST=1 tuist generate        
+        make generate
+
+    - name: Main Build
+      run: |
+        make build
+
     - name: All Scheme Test
       run: |
         make test

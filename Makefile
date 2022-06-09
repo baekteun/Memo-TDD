@@ -1,5 +1,5 @@
 generate:
-	tuist generate
+	TUIST_TEST=1 tuist generate
 
 setup:
 	curl -Ls https://install.tuist.io | bash
@@ -15,6 +15,9 @@ reset:
 
 needle:
 	sh Scripts/NeedleRunScript.sh
+
+build:
+	tuist build MemoTDD
 
 test:
 	tuist test LocalDataSource -d 'iPhone 13' -o latest

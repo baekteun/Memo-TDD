@@ -30,7 +30,6 @@ fastlane/screenshots/screenshots.html
 
 # scan temporary files
 fastlane/test_output
-Secret.swift
 # Fastlane.swift runner binary
 fastlane/FastlaneRunner
 

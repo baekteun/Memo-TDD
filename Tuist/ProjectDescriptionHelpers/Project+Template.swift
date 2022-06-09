@@ -66,7 +66,7 @@ public extension Project {
     }
     
 }
-let isForTest = ProcessInfo.processInfo.environment["TUIST_TEST"] == "1" ? true : false
+let isForTest = ProcessInfo.processInfo.environment["TUIST_TEST"] == "0" ? true : false
 public extension Project {
     static func project(
         name: String,

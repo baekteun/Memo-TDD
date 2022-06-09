@@ -4,6 +4,7 @@ import ProjectDescriptionHelpers
 let project = Project.staticFramework(
     name: "RemoteDataSource",
     dependencies: [
-        .Project.Module.Utility
+        .Project.Module.Utility,
+        .Project.Service.APIKit
     ]
 )

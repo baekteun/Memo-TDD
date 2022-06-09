@@ -3,7 +3,7 @@ import ProjectDescription
 import UtilityPlugin
 import Foundation
 
-let isForTest = ProcessInfo.processInfo.environment["TUIST_TEST"] == "0" ? true : false
+let isForTest = (ProcessInfo.processInfo.environment["TUIST_TEST"] ?? "0") == "0" ? true : false
 
 let scripts: [TargetScript] = isForTest ? [] : [.swiftLint]
 

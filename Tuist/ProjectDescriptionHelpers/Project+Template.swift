@@ -1,5 +1,6 @@
 import ProjectDescription
 import UtilityPlugin
+import Foundation
 
 public extension Project {
     static func staticLibrary(
@@ -65,7 +66,7 @@ public extension Project {
     }
     
 }
-
+let isForTest = ProcessInfo.processInfo.environment["TUIST_TEST"] == "1" ? true : false
 public extension Project {
     static func project(
         name: String,
@@ -81,9 +82,7 @@ public extension Project {
         infoPlist: InfoPlist,
         hasDemoApp: Bool = false
     ) -> Project {
-        let scripts: [TargetScript] = [
-            .swiftLint
-        ]
+        let scripts: [TargetScript] = isForTest ? [] : [.swiftLint]
         let appTarget = Target(
             name: name,
             platform: platform,

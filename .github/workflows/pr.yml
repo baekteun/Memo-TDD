@@ -28,8 +28,8 @@ jobs:
         
     - name: Upload Codecov
       run: |
-        curl -Os https://uploader.codecov.io/latest/linux/codecov
-        chmod +x codecov
+        curl -Os https://uploader.codecov.io/latest/macos/codecov 
+        chmod +x codecov ./codecov
         ./codecov -t ${{ secrets.CODECOV_SECRET }}
         
     - name: Upload coverage to Codecov

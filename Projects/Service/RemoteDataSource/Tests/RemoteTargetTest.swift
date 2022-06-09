@@ -1,3 +1,5 @@
+// swiftlint:disable all
+
 import XCTest
 import Quick
 import Nimble

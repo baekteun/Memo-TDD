@@ -1,11 +1,11 @@
 import ProjectDescriptionHelpers
 import ProjectDescription
 import UtilityPlugin
+import Foundation
 
+let isForTest = ProcessInfo.processInfo.environment["TUIST_TEST"] == "1" ? true : false
 
-let scripts: [TargetScript] = [
-    .swiftLint
-]
+let scripts: [TargetScript] = isForTest ? [] : [.swiftLint]
 
 let targets: [Target] = [
     .init(

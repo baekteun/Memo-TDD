@@ -133,6 +133,10 @@ public extension Project {
             dependencies: testTargetDependencies
         )
         
+        let schemes: [Scheme] = hasDemoApp
+        ? [.makeScheme(target: .debug, name: name), .makeDemoScheme(target: .debug, name: name)]
+        : [.makeScheme(target: .debug, name: name)]
+        
         let targets: [Target] = hasDemoApp
         ? [appTarget, testTarget, demoAppTarget]
         : [appTarget, testTarget]
@@ -141,7 +145,8 @@ public extension Project {
             name: name,
             organizationName: organizationName,
             packages: packages,
-            targets: targets
+            targets: targets,
+            schemes: schemes
         )
     }
 }
@@ -159,6 +164,38 @@ extension Scheme {
             archiveAction: .archiveAction(configuration: target.configurationName),
             profileAction: .profileAction(configuration: target.configurationName),
             analyzeAction: .analyzeAction(configuration: target.configurationName)
+        )
+    }
+    static func makeScheme(target: ConfigurationName, name: String) -> Scheme {
+        return Scheme(
+            name: name,
+            shared: true,
+            buildAction: .buildAction(targets: ["\(name)"]),
+            testAction: .targets(
+                ["\(name)Tests"],
+                configuration: target,
+                options: .options(coverage: true, codeCoverageTargets: ["\(name)"])
+            ),
+            runAction: .runAction(configuration: target),
+            archiveAction: .archiveAction(configuration: target),
+            profileAction: .profileAction(configuration: target),
+            analyzeAction: .analyzeAction(configuration: target)
+        )
+    }
+    static func makeDemoScheme(target: ConfigurationName, name: String) -> Scheme {
+        return Scheme(
+            name: name,
+            shared: true,
+            buildAction: .buildAction(targets: ["\(name)DemoApp"]),
+            testAction: .targets(
+                ["\(name)Tests"],
+                configuration: target,
+                options: .options(coverage: true, codeCoverageTargets: ["\(name)DemoApp"])
+            ),
+            runAction: .runAction(configuration: target),
+            archiveAction: .archiveAction(configuration: target),
+            profileAction: .profileAction(configuration: target),
+            analyzeAction: .analyzeAction(configuration: target)
         )
     }
     static func makeDemoScheme(target: ProjectDeployTarget, name: String) -> Scheme {

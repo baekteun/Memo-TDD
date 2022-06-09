@@ -17,7 +17,6 @@ needle:
 	sh Scripts/NeedleRunScript.sh
 
 test:
-	export TUIST_PREPARE_FOR_TESTING=1
 	tuist test LocalDataSource -d 'iPhone 13' -o latest
 	tuist test RemoteDataSource -d 'iPhone 13' -o latest
 	tuist test CommonFeature -d 'iPhone 13' -o latest

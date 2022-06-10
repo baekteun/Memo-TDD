@@ -20,14 +20,14 @@ jobs:
     - name: Project Generate
       run: |
         rm -rf .package.resolved
-        make generate
+        TUIST_TEST=0 tuist generate
 
     - name: All Scheme Test
       run: |
         make test
         
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v2
+      uses: codecov/codecov-action@v1.2.1
       with:
         token: ${{ secrets.CODECOV_SECRET }}
         flags: unittests

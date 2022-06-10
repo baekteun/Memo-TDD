@@ -24,7 +24,9 @@ jobs:
       run: |
         make test
         
-    - name: Upload CodeCov
+    - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
       with:
+        token: ${{ secrets.CODECOV_SECRET }}
+        flags: unittests
         fail_ci_if_error: true

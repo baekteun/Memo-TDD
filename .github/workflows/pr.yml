@@ -26,13 +26,9 @@ jobs:
       run: |
         make test
         
-    - name: Upload Codecov
-      run: |
-        curl -Os https://uploader.codecov.io/latest/macos/codecov 
-        chmod +x codecov ./codecov
-        ./codecov -t ${{ secrets.CODECOV_SECRET }}
-        
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
       with:
+        token: ${{ secrets.CODECOV_SECRET }}
+        flags: unittests
         fail_ci_if_error: true
